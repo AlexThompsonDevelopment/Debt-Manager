@@ -42,7 +42,7 @@ extension BudgetViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        <#code#>
+        performSegue(withIdentifier: "ExpenseSegue", sender: self)
     }
     
     
