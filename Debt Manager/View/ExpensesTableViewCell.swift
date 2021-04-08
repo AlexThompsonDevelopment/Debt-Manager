@@ -2,33 +2,46 @@
 //  ExpensesTableViewCell.swift
 //  Debt Manager
 //
-//  Created by Alexander Thompson on 7/4/21.
+//  Created by Alexander Thompson on 8/4/21.
 //
 
 import UIKit
 
 class ExpensesTableViewCell: UITableViewCell {
 
-    
-    @IBOutlet weak var expenseName: UITextField!
-    @IBOutlet weak var expenseCost: UITextField!
-    
     let expensesViewController = ExpensesViewController()
     
-    @IBAction func editingEnded(_ sender: UITextField) {
-      //find way to append all values to array 
- 
-    }
+    
+    
+    @IBOutlet weak var expenseCost: UITextField!
+    
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+    
+
     }
 
+    func convertText(text: String) -> Double {
+  let string = NSString(string: text)
+        let double = string.doubleValue
+        return double
+  
+  }
+    
+    @IBAction func editingEnded(_ sender: UITextField) {
+       let doubleValue = convertText(text: sender.text ?? "")
+        sender.text = String(format: "$%.2f", doubleValue)
+      ExpensesViewController.expenseArray[expenseCost.tag] = doubleValue
+      
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "updateExpenseLabel"), object: nil)
+    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
 
     }
-    
+
 }

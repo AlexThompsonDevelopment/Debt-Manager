@@ -17,8 +17,7 @@
 		FAACB59D26155E4300598AB8 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAACB59B26155E4300598AB8 /* TableViewCell.swift */; };
 		FAACB59E26155E4300598AB8 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAACB59C26155E4300598AB8 /* TableViewCell.xib */; };
 		FAACB5A2261D553500598AB8 /* ExpensesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAACB5A1261D553500598AB8 /* ExpensesViewController.swift */; };
-		FAACB5A6261D580500598AB8 /* ExpensesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAACB5A4261D580500598AB8 /* ExpensesTableViewCell.swift */; };
-		FAACB5A7261D580500598AB8 /* ExpensesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAACB5A5261D580500598AB8 /* ExpensesTableViewCell.xib */; };
+		FAACB5B7261EA84A00598AB8 /* ExpensesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAACB5B6261EA84A00598AB8 /* ExpensesTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,8 +33,7 @@
 		FAACB59B26155E4300598AB8 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		FAACB59C26155E4300598AB8 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		FAACB5A1261D553500598AB8 /* ExpensesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesViewController.swift; sourceTree = "<group>"; };
-		FAACB5A4261D580500598AB8 /* ExpensesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesTableViewCell.swift; sourceTree = "<group>"; };
-		FAACB5A5261D580500598AB8 /* ExpensesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExpensesTableViewCell.xib; sourceTree = "<group>"; };
+		FAACB5B6261EA84A00598AB8 /* ExpensesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,8 +85,7 @@
 				FAACB5502613DAF500598AB8 /* Main.storyboard */,
 				FAACB59B26155E4300598AB8 /* TableViewCell.swift */,
 				FAACB59C26155E4300598AB8 /* TableViewCell.xib */,
-				FAACB5A4261D580500598AB8 /* ExpensesTableViewCell.swift */,
-				FAACB5A5261D580500598AB8 /* ExpensesTableViewCell.xib */,
+				FAACB5B6261EA84A00598AB8 /* ExpensesTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -169,7 +166,6 @@
 				FAACB55A2613DAF600598AB8 /* LaunchScreen.storyboard in Resources */,
 				FAACB59E26155E4300598AB8 /* TableViewCell.xib in Resources */,
 				FAACB5572613DAF600598AB8 /* Assets.xcassets in Resources */,
-				FAACB5A7261D580500598AB8 /* ExpensesTableViewCell.xib in Resources */,
 				FAACB5522613DAF500598AB8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -187,7 +183,7 @@
 				FAACB5552613DAF500598AB8 /* Debt_Manager.xcdatamodeld in Sources */,
 				FAACB54D2613DAF500598AB8 /* SceneDelegate.swift in Sources */,
 				FAACB5A2261D553500598AB8 /* ExpensesViewController.swift in Sources */,
-				FAACB5A6261D580500598AB8 /* ExpensesTableViewCell.swift in Sources */,
+				FAACB5B7261EA84A00598AB8 /* ExpensesTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

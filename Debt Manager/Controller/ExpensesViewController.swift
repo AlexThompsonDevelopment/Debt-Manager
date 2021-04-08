@@ -13,28 +13,29 @@ class ExpensesViewController: UIViewController {
     @IBOutlet weak var navName: UINavigationItem!
     @IBOutlet weak var totalExpenses: UILabel!
     
-    var expensesValue: [Double]?
-    var tableViewRows = 1
+    static var expenseArray = [Double]()
+    
+    var tableViewRows = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    registerCell()
         tableView.delegate = self
         tableView.dataSource = self
+        NotificationCenter.default.addObserver(self, selector: #selector(updateExpenseLabel), name: Notification.Name(rawValue: "updateExpenseLabel"), object: nil)
             }
 
     @IBAction func buttonPressed(_ sender: UIButton) {
         tableViewRows += 1
+        ExpensesViewController.expenseArray.append(0.0)
         tableView.reloadData()
-        
     }
     
-    private func registerCell() {
-        let cell = UINib(nibName: "ExpensesTableViewCell", bundle: nil)
-        self.tableView.register(cell, forCellReuseIdentifier: "ExpenseCell")
+    @objc func updateExpenseLabel() {
+        totalExpenses.text = String(format: "$%.2f", ExpensesViewController.expenseArray.reduce(0, +))
     }
-    
-}
+   
+    }
+
 
 extension ExpensesViewController: UITableViewDelegate, UITableViewDataSource {
     
@@ -50,11 +51,16 @@ extension ExpensesViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ExpenseCell") as? ExpensesTableViewCell else {
             return UITableViewCell()
         }
-        return cell
+       
+        cell.expenseCost.tag = indexPath.row
+     
+            return cell
         }
     
+        }
+
         
-    }
+    
     
     
     
