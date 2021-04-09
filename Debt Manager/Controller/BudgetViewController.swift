@@ -46,11 +46,14 @@ extension BudgetViewController: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
         let topics = ["Income", "Expenses", "Savings"]
+        let values = ["0", "0", "0"]
         cell.topicLabel.text = topics[indexPath.row]
+        cell.valueLabel.text = values[indexPath.row]
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //implement tableview reusefunctionality here
         performSegue(withIdentifier: "ExpenseSegue", sender: self)
     }
     
