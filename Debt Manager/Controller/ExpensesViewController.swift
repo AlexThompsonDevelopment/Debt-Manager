@@ -16,6 +16,7 @@ class ExpensesViewController: UIViewController {
     static var expenseArray = [Double]()
     var data = Data()
     var tableViewRows = 0
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +31,7 @@ class ExpensesViewController: UIViewController {
         tableView.reloadData()
     }
     
+    //change this to pass data back through protocols
     @objc func updateExpenseLabel() {
         totalExpenses.text = String(format: "$%.2f", ExpensesViewController.expenseArray.reduce(0, +))
     }
