@@ -14,7 +14,7 @@ class ExpensesViewController: UIViewController {
     @IBOutlet weak var totalExpenses: UILabel!
     
     static var expenseArray = [Double]()
-    
+    var data = Data()
     var tableViewRows = 0
     
     override func viewDidLoad() {
@@ -56,6 +56,16 @@ extension ExpensesViewController: UITableViewDelegate, UITableViewDataSource {
      
             return cell
         }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            ExpensesViewController.expenseArray.remove(at: indexPath.row)
+            tableViewRows -= 1
+            tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
+            tableView.reloadData()
+            updateExpenseLabel()
+        }
+    }
     
         }
 
