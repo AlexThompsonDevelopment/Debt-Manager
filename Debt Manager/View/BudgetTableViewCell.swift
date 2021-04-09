@@ -1,19 +1,19 @@
 //
-//  TableViewCell.swift
+//  BudgetTableViewCell.swift
 //  Debt Manager
 //
-//  Created by Alexander Thompson on 1/4/21.
+//  Created by Alexander Thompson on 9/4/21.
 //
 
 import UIKit
 
-class TableViewCell: UITableViewCell {
+class BudgetTableViewCell: UITableViewCell {
 
     
+    @IBOutlet weak var budgetImage: UIImageView!
+    @IBOutlet weak var cellName: UILabel!
+    @IBOutlet weak var cellValue: UILabel!
     
-    @IBOutlet weak var cellImage: UIImageView!
-    @IBOutlet weak var topicLabel: UILabel!
-    @IBOutlet weak var valueLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
