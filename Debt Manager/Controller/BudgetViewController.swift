@@ -11,6 +11,14 @@ class BudgetViewController: UIViewController {
 
     
     @IBOutlet weak var tableView: UITableView!
+    var data = Data()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        //use userdefaults to save total and load it here. 
+        tableView.reloadData()
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

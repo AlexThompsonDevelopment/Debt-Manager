@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--Debts-->
         <scene sceneID="Ouj-7L-YMn">
             <objects>
                 <viewController id="IWE-48-SD6" sceneMemberID="viewController">
@@ -18,7 +18,7 @@
                         <viewLayoutGuide key="safeArea" id="uST-3B-tYB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="8LK-G1-ZhN"/>
+                    <tabBarItem key="tabBarItem" title="Debts" id="8LK-G1-ZhN"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fmQ-9K-Ai6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -42,11 +42,11 @@
             </objects>
             <point key="canvasLocation" x="-1213" y="-79"/>
         </scene>
-        <!--Item 1-->
+        <!--Finances-->
         <scene sceneID="c0t-9t-eYE">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nil-66-Ezp" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 1" id="HSq-tO-CTj"/>
+                    <tabBarItem key="tabBarItem" title="Finances" id="HSq-tO-CTj"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Oto-Uy-DKD">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>

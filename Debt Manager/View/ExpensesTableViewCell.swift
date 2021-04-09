@@ -23,13 +23,14 @@ class ExpensesTableViewCell: UITableViewCell {
 
     }
 
+    //move this to model
     func convertText(text: String) -> Double {
   let string = NSString(string: text)
         let double = string.doubleValue
         return double
   
   }
-    
+    //create userdefault function to save all this info
     @IBAction func editingEnded(_ sender: UITextField) {
        let doubleValue = convertText(text: sender.text ?? "")
         sender.text = String(format: "$%.2f", doubleValue)
